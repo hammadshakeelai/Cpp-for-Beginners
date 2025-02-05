@@ -10,6 +10,9 @@ int main(){
     char alphabet3 = 'ABC1';
     cout<< alphabet3 <<endl;
 
+    int alphabt = alphabet3;
+    std::cout<<alphabt<<endl;
+
     int alphabett = 'A';
     cout<<alphabett<<endl;
 
@@ -21,6 +24,7 @@ output;
 A
 B
 1
+49
 65
 16705
 */
