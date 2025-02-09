@@ -23,3 +23,14 @@ int main() {
 	
 	return 0;
 }
+/*
+output:
+size of int is 4
+size of float is 4
+size of char is 1
+size of long int is 4
+size of short int is 2
+size of double is 8
+size of long double is 16
+size of bool is 1
+*/
