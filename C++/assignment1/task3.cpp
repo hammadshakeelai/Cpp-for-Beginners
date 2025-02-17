@@ -3,12 +3,16 @@ using namespace std;
 int main (){
 
     int lnum,unum;
-    do {
+    cout<<"Enter Starting Point Value: ";
+    cin>>lnum;
+    cout<<"Enter Ending Point Value: ";
+    cin>>unum;
+    while (lnum > unum) {
         cout<<"Enter Starting Point Value: ";
         cin>>lnum;
         cout<<"Enter Ending Point Value: ";
         cin>>unum;
-    } while (lnum > unum);
+    }
 
     for (int i = lnum; i <= unum; i++){
         bool prime = true;

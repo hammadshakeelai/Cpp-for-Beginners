@@ -1,16 +1,13 @@
 #include <iostream>
-#include <iomanip>
 using namespace std;
-int main(){
-    cout<<"umar"<<setw(8)<<"hmmd";
-    return 0;
+
+void greetings(){
+	cout<<"Hello World!";
 }
-#include <iostream>
-using namespace std;
-
-
-//void AddNums(int,int);//function prototype /declaration
-
+void AddNums(int&,int);//function prototype /declaration
+int num(){
+	return 6;
+}
 int main(){
 	
 	int n1,n2;
@@ -19,10 +16,10 @@ int main(){
 	cout<<"Enter n2: ";
 	cin>>n2;
 	AddNums(n1,n2);
-	
+	int two = num();
 	return 0;
 }
-void AddNums(int x,int y){
+void AddNums(int &x,int y){
 	int r = x+y;
 	cout<<"The sum of "<<x<<" and "<<y<<" is "<<r;
 }
