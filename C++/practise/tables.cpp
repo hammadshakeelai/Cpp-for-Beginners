@@ -8,7 +8,7 @@ int main(){
     cin>>lowernum;
     cout<<"Enter Ending Point Value: ";
     cin>>uppernum;
-    while (lowernum > uppernum) {
+    while (lowernum >= uppernum) {
         cout<<"Invalid inputs!!\nEnter Starting Point Value: ";
         cin>>lowernum;
         cout<<"Enter Ending Point Value: ";
