@@ -1,0 +1,59 @@
+#include<iostream>
+using namespace std;
+void printStar(int x){
+	for(int i=0;i<x;i++){
+		cout<<"*";
+	}
+}
+void StartPatterns(int j){
+	cout<<"Pattern A"<<endl;
+	for (int i=0;i<=j;i++){
+		printStar(i);
+		cout<<endl;
+	}
+	cout<<endl;
+	cout<<"Pattern B"<<endl;
+	cout<<endl;
+	for (int i=j;i>=0;i--){
+		printStar(i);
+		cout<<endl;
+	}
+}
+void problem1(){
+	int j;
+	cout<<"Enter height of the Patterns: ";
+	cin>>j;
+	StartPatterns(j);
+}
+int square(int num){
+	int answer=num;
+	answer*=answer;
+	return answer;
+}
+int SumOfDigits(int num){
+	int answer=0;
+	while(num!=0){
+		answer+=(num%10);
+		num/=10;
+	}
+	
+	int SquareAnswer=square(answer);
+	return SquareAnswer;
+}
+void problem2(){
+	int num;
+	cout<<"Enter a number greater than 9: ";
+	cin>>num;
+	while(num<=9){
+		cout<<"Invalid Input. Try Again..."<<endl;
+		cout<<"Enter a number greater than 9: ";
+		cin>>num;
+	}
+	int answer=SumOfDigits(num);
+	cout<<"The Sqaure of The Sum Of Digits in Your Number is "<<answer;
+}
+int main(){
+	problem1();
+	problem2();	
+	return 0;
+}
