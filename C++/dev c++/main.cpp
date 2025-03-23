@@ -1,13 +1,25 @@
 #include<iostream>
+#include<string>//oop analysis and design
 using namespace std;
-int main(){
-	int total;
-	for(int i=0;i<3;i++){
-		total=0;
-		for(int j=0;j<10;j++){
-			total+=(i+j);
+class Car{
+	public:
+		string name;
+		int maxSpeed;
+		char tier;
+		float horsePower;
+		string brand;
+		
+		string carType;
+		bool isAuto;
+		int price;
+		double milage;
+		
+		void Car_basic(string name,string brand,int maxSpeed,char tier,float horsePower){
+			Car.name=
 		}
-		cout<<total;
-	}
+		
+};
+int main(){
+	
 	return 0;
 }
