@@ -21,7 +21,6 @@ int main() {
 		//cout<<dltdmg<<endl;//to test if true--coz i cant believe my own results like damn
 		time+=10;
 	}while(auralvl>dltdmg);
-	cout<<"Time = "<<time<<"\n";
 	int seconds,minutes,hours,days,years;
 	years=(time/31536000);
 	time%=31536000;
