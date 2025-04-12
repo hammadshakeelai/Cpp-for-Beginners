@@ -1,67 +1,61 @@
 #include<iostream>
-#include<string>//oop analysis and design
 using namespace std;
-class Car{
-	public:
-		string name;
-		string brand;
-		char tier;
-		int maxSpeed;
-		float horsePower;
-		
-		string carType;
-		bool isAuto;
-		int price;
-		double milage;
-		Car() {
-			name="unknown";
-			brand="unknown";
-			tier='U';
-			maxSpeed=0;
-			horsePower=0;
-			
-			carType="Unknown";
-			isAuto=0;
-			price=0;
-			milage=0;
-		}
-//		void car(string nm,string brnd,char tr,int mxspd,float hp) {
-//			name=nm;
-//			brand=brnd;
-//			tier=tr;
-//			maxSpeed=mxspd;
-//			horsePower=hp;
-//		}
-		void carInDetail(string nm,string brnd,char tr,int mxspd,float hp,string crtp,bool Auto,int p,double m) {
-			name=nm;
-			brand=brnd;
-			tier=tr;
-			maxSpeed=mxspd;
-			horsePower=hp;
-			carType=crtp;
-			isAuto=Auto;
-			price=p;
-			milage=m;
-		}
-		void display(){
-			cout<<"___________________________________________\n";
-			cout<<"Car Name:  "<<name<<endl;
-			cout<<"Car Brand:  "<<brand<<endl;
-			cout<<"Car Tier:  "<<tier<<endl;
-			cout<<"Car Max Speed:  "<<maxSpeed<<endl;
-			cout<<"Car Horse Power:  "<<horsePower<<endl;
-			cout<<"Car Type:  "<<carType<<endl;
-			cout<<"Car is "<<(isAuto?"Automatic":"Manual")<<endl;
-			cout<<"Car Price:  "<<price<<endl;
-			cout<<"Car Milage:  "<<milage<<endl;
-			cout<<"___________________________________________\n";
-			
-		}
+class Patient{
+    public:
+        char gender;
+        int age;
+        Patient(char Gender,int Age){
+            gender=Gender;
+            age=Age;
+            cout<<"New Patient: ";
+            if(Gender=='m'){
+                cout<<"Male ";
+            }else{
+                cout<<"Female ";
+            }
+            cout<<Age<<endl;
+        }
+        void ward(){
+            if(gender=='m'){
+                if(age>16){
+                    cout<<"Admit Patient to Males Ward \n";
+                }
+                else{
+                    cout<<"Admit Patient to Childrens Ward \n";
+                }
+            }
+            else{
+                if(age>16){
+                    cout<<"Admit Patient to Females Ward \n";
+                }
+                else{
+                    cout<<"Admit Patient to Childrens Ward \n";
+                }
+            }
+        }
 };
 int main(){
-	Car mycar;
-	mycar.display();
-	mycar.carInDetail("yaris","toyota",'C',195,117.6,"sedan",1,4800000,8);
-	mycar.display();
-	return 0;
+    char gender;
+    int age;
+    cout<<"enter gender m/f: ";
+    cin>>gender;
+    cout<<"enter age: ";
+    cin>>age;
+
+    Patient patient1(gender,age);
+    patient1.ward();
+    
+    // Patient patient2;
+    // patient2.newPatient('m',11);
+    // patient2.ward();
+    
+    // Patient patient3;
+    // patient3.newPatient('f',10);
+    // patient3.ward();
+    
+    // Patient patient4;
+    // char gendr = 'f';
+    // patient4.newPatient(gendr,11);
+    // patient4.ward();
+    return 0;
 }

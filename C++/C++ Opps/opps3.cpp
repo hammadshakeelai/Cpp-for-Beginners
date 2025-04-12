@@ -4,7 +4,7 @@ class Patient{
     public:
         char gender;
         int age;
-        void newPatient(char Gender,int Age){
+        Patient(char Gender,int Age){
             gender=Gender;
             age=Age;
             cout<<"New Patient: ";
@@ -17,7 +17,7 @@ class Patient{
         }
         void ward(){
             if(gender=='m'){
-                if(age>10){
+                if(age>16){
                     cout<<"Admit Patient to Males Ward \n";
                 }
                 else{
@@ -25,7 +25,7 @@ class Patient{
                 }
             }
             else{
-                if(age>10){
+                if(age>16){
                     cout<<"Admit Patient to Females Ward \n";
                 }
                 else{
@@ -35,22 +35,27 @@ class Patient{
         }
 };
 int main(){
+    char gender;
+    int age;
+    cout<<"enter gender m/f: ";
+    cin>>gender;
+    cout<<"enter age: ";
+    cin>>age;
 
-    Patient alihaider;
-    alihaider.newPatient('m',10);
-    alihaider.ward();
+    Patient patient1(gender,age);
+    patient1.ward();
     
-    Patient alihaider2;
-    alihaider2.newPatient('m',11);
-    alihaider2.ward();
+    // Patient patient2;
+    // patient2.newPatient('m',11);
+    // patient2.ward();
     
-    Patient alihaider3;
-    alihaider3.newPatient('f',10);
-    alihaider3.ward();
+    // Patient patient3;
+    // patient3.newPatient('f',10);
+    // patient3.ward();
     
-    Patient alihaider4;
-    char gendr = 'f';
-    alihaider4.newPatient(gendr,11);
-    alihaider4.ward();
+    // Patient patient4;
+    // char gendr = 'f';
+    // patient4.newPatient(gendr,11);
+    // patient4.ward();
     return 0;
 }
