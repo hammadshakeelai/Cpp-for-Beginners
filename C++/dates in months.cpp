@@ -76,7 +76,7 @@ int main() {
 
 int days;
 bool ifleapyear;
-int startyear=1990,endyear=2027;
+int startyear=2025,endyear=2027;
 
 for(int j=startyear;j<=endyear;j++)
 {	
