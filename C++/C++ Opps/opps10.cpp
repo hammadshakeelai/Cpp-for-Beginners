@@ -25,5 +25,5 @@ int main () {
     
     Dog wolf;
     wolf.info();
-    return 0;
+    return 0;
 }
