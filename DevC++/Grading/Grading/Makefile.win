@@ -1,15 +1,15 @@
-# Project: dev c++
+# Project: Grading
 # Makefile created by Embarcadero Dev-C++ 6.3
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = Untitled2.o
-LINKOBJ  = Untitled2.o
+OBJ      = main.o GradedActivity.o FinalExam.o
+LINKOBJ  = main.o GradedActivity.o FinalExam.o
 LIBS     = -L"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/lib" -L"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/include" -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
 CXXINCS  = -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/include" -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/x86_64-w64-mingw32/include" -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include" -I"D:/DevCPP_v6.3/Dev-Cpp/TDM-GCC-64/lib/gcc/x86_64-w64-mingw32/9.2.0/include/c++"
-BIN      = "dev c++.exe"
+BIN      = Grading.exe
 CXXFLAGS = $(CXXINCS) 
 CFLAGS   = $(INCS) 
 DEL      = D:\DevCPP_v6.3\Dev-Cpp\DevCpp.exe INTERNAL_DEL
@@ -24,5 +24,11 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-Untitled2.o: Untitled2.cpp
-	$(CPP) -c Untitled2.cpp -o Untitled2.o $(CXXFLAGS)
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+GradedActivity.o: GradedActivity.cpp
+	$(CPP) -c GradedActivity.cpp -o GradedActivity.o $(CXXFLAGS)
+
+FinalExam.o: FinalExam.cpp
+	$(CPP) -c FinalExam.cpp -o FinalExam.o $(CXXFLAGS)
