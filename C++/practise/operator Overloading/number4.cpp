@@ -4,7 +4,7 @@ class Number {
     int value;
 
 public:
-    Number() : value(0) { }
+    // Number() : value(0) { }
     Number(int val) : value(val) { }
 	void display() const {
     	cout << value;

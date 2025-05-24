@@ -1,16 +1,28 @@
 #include <iostream>
 using namespace std;
-class A{
-    int a;
-
+class B{
     public:
-        A(int b){
+        int a;
+        B(int b){
             a = b;
         }
 };
-int main(){
+class A{
+    public:
+        B* b;
+        int a;
+        A(int _a,B* _b){
+            a = _a;
+            b=_b;
+        }
+};
 
-    cout<<""<<endl;
+int main(){
+    B obj2(2);
+
+    A* Pointer_of_obj1 = new A( 4 , &obj2 );
+
+    cout<<Pointer_of_obj1->b->a<<endl;
 
     return 0;
 }

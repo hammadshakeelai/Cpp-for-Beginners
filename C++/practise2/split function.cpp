@@ -1,6 +1,6 @@
 #include<iostream>
 #include<string>
-#include<iomanip>
+#include<sstream> // Added for getline with string
 using namespace std;
 //void split2(string text){
 //	string word = "";
@@ -71,11 +71,6 @@ void split(string text,string array[]) {
 }
 int main (){
 	string text = "hi my name is sykuno i am a streamer m";
-	/**/
-	cout<<"Enter the space seperated text you want to separate:  ";
-	getline(cout,text);
-	/**/
-	cout<<"words from that text: \n";
 	string array[textlength(text)];
 	split(text,array);
 	for(string str: array){

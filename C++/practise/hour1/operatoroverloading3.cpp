@@ -39,7 +39,10 @@ class Number{
 		int operator%(Number &A){
 			return (this->a%A.a);
 		}
-		int operator=(int a){
+		int operator!(Number &A){
+			return ((this->!aA.a));
+		}
+		Number& operator=(int a){
 			return Number(a);
 		}
 };
@@ -57,7 +60,7 @@ int main(){
 	cout<<(a|b)<<endl;
 	cout<<(a%b)<<endl;
 	cout<<(a^b)<<endl;
-	cout<<(!a)<<endl;
+	cout<<(a!b)<<endl;
 	/**/
 	return 0;
 } 
