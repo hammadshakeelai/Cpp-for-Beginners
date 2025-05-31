@@ -24,7 +24,7 @@ class Patient{
                     cout<<"Admit Patient to Childrens Ward \n";
                 }
             }
-            else{
+            else if(gender=='f'){
                 if(age>16){
                     cout<<"Admit Patient to Females Ward \n";
                 }
@@ -32,6 +32,7 @@ class Patient{
                     cout<<"Admit Patient to Childrens Ward \n";
                 }
             }
+            
         }
 };
 int main(){

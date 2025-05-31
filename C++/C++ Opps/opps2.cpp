@@ -8,8 +8,7 @@ class Bestie{
 		char status;
 		void wishbirthday(){
 			cout<<"Happy Birthday!!! "<<fullName<<endl;
-			age++;
-			cout<<"now you are "<<age<<" years old."<<endl;
+			cout<<"now you are "<<++age<<" years old."<<endl;
 			cout<<"Friendship Status: "<<status<<endl;
 		}
 };

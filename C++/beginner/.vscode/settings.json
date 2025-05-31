@@ -1,0 +1,10 @@
+{
+    "notebook.defaultFormatter": "danielpinto8zz6.c-cpp-compile-run",
+    "github.copilot.chat.followUps": "always",
+    "github.copilot.chat.localeOverride": "en",
+    "files.associations": {
+        "iostream": "cpp",
+        "string": "cpp",
+        "istream": "cpp"
+    }
+}

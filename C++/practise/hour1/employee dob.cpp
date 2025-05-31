@@ -44,9 +44,13 @@ public:
 
 	// Corrected: Logical NOT (unary)
 	bool operator!() {
-		return !this->a;
+		return this->a;
 	}
-
+	// Remove incorrect member operator<< overload
+	friend ostream& operator<<(ostream& out, const Number& num) {
+		out << num.a;
+		return out;
+	}
 	// Corrected: Assignment operator
 	Number& operator=(int val) {
 		this->a = val;
@@ -62,11 +66,17 @@ int main() {
 	cout << a - b << endl;
 	cout << a * b << endl;
 	cout << a / b << endl;
-	cout << (a & b) << endl;
-	cout << (a | b) << endl;
-	cout << (a % b) << endl;
-	cout << (a ^ b) << endl;
-	cout << (!a) << endl;  // Calls unary !
+
+	cout << (a & b) << endl;// bitwise and gate
+	cout << (a | b) << endl;// bitwise or gate
+
+	cout << (a % b) << endl;// bitwise mod gate
+	cout << (a ^ b) << endl;// bitwise xor gate
+	// cout << (a == b) << endl;  // Calls equality operator
+	a = 11;  // Calls assignment operator
+	cout << a << endl;  // Outputs the value of a after assignment
+
+	cout << (!a)+1 << endl;  // Calls unary !
 
 	return 0;
 }

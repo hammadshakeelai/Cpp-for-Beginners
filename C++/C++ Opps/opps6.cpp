@@ -3,9 +3,10 @@ using namespace std;
 class Box {
   public:
 	int vol=0;
-		
-	Box() {
-	  int length=10;
+	Box	() {
+	}
+	Box(double a) {
+	  int length=a;
 	  int height=11;
 	  vol=height*length;
 	}

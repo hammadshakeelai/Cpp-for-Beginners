@@ -73,8 +73,10 @@ int main (){
 	string text = "hi my name is sykuno i am a streamer m";
 	string array[textlength(text)];
 	split(text,array);
+	cout<<"[ ";
 	for(string str: array){
-		cout<<str<<endl;
+		cout<<str<<", ";
 	}
+	cout<<"]"<<endl;
 	return 0;
 }

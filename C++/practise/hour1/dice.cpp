@@ -9,7 +9,7 @@ class B{
 };
 class A{
     public:
-        B* b;
+        B* b;//passing b refrences
         int a;
         A(int _a,B* _b){
             a = _a;
