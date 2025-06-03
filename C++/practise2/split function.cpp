@@ -1,6 +1,6 @@
 #include<iostream>
-#include<string>
-#include<sstream> // Added for getline with string
+//#include<string>
+//#include<iomanip>
 using namespace std;
 //void split2(string text){
 //	string word = "";
@@ -59,9 +59,10 @@ void split(string text,string array[]) {
 	int pointer = 0;
 	for(char ch : text){
 		if(ch==' '){
-			array[pointer] = word;
-			pointer++;
-			word="";
+			if (word != "")
+				array[pointer] = word;
+				pointer++;
+				word="";
 		}
 		else{
 			word = word + ch;
@@ -71,12 +72,19 @@ void split(string text,string array[]) {
 }
 int main (){
 	string text = "hi my name is sykuno i am a streamer m";
+	/**/
+	cout<<"Enter the space seperated text you want to separate:  ";
+	getline(cin >> ws,text);
+	/**/
+	cout<<"words from that text: \n";
 	string array[textlength(text)];
 	split(text,array);
-	cout<<"[ ";
 	for(string str: array){
-		cout<<str<<", ";
+		cout<<str<<endl;
 	}
-	cout<<"]"<<endl;
+//	cout<<"-----------\n";
+//	for(int i=0;i<7;i++){
+//		cout<<array[i]<<endl;
+//	}
 	return 0;
 }
