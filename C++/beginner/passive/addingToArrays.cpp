@@ -55,3 +55,7 @@ for(int i=0;i<arr_size;i++)
 delete [] arr;
 	return 0;
 }
+// This code demonstrates how to dynamically add elements to an array in C++.
+// It uses a function to resize the array and add a new element, ensuring memory is managed correctly.
+// The code also includes a simple demonstration of the process in the main function.
+// The output will show the contents of the array before and after adding new elements.
