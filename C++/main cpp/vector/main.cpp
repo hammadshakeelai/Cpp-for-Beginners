@@ -1,12 +1,16 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 
 int main() {
-    std::vector<int> numbers = {1, 2, 3, 4, 5};
 
-    for (const auto& num : numbers) {
-        std::cout << num << std::endl;
-    }
+    // 2D vector (grid) example
+    std::vector<int> grid = {
+        1,2,3
+    };
+    grid.pop_back();
+    std::cout << grid.back();
+
 
     return 0;
 }
